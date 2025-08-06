@@ -29,8 +29,8 @@ public class UserController {
             @RequestParam(required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") Date endDate,
             Pageable pageable) {
 
-        if (startDate == null) startDate = new Date(0); // Unix epoch
-        if (endDate == null) endDate = new Date(); // Current date
+        if (startDate == null) startDate = new Date(0); 
+        if (endDate == null) endDate = new Date();
 
         Page users = userService.searchUsers(name, pinCode, startDate, endDate, pageable);
         return ResponseEntity.ok(users);
