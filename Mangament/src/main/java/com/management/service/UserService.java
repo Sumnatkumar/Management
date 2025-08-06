@@ -25,7 +25,7 @@ public class UserService {
     public User registerUser(UserDTO userDTO) {
         User user = new User();
         user.setUsername(userDTO.getUsername());
-        user.setPassword(userDTO.getPassword()); // In real app, password should be encrypted
+        user.setPassword(userDTO.getPassword()); 
         user.setEmail(userDTO.getEmail());
 
         User savedUser = userRepository.save(user);
